@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sorteador</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding fixed>
+
+    <h5>Informe o intervalo entre os numeros que deseja sortear:</h5>
+    <ion-item col-12>
+      <ion-label fixed>Inicial</ion-label>
+      <ion-input type="number" [(ngModel)]="num1" min="1" max="99999"></ion-input>
+    </ion-item>
+  
+    <ion-item col-12>
+      <ion-label fixed>Final</ion-label>
+      <ion-input type="number" [(ngModel)]="num2"></ion-input>
+    </ion-item>
+
+    <button ion-button full color="dark" (click)="random()"> Sortear</button>
+
+    <h1>{{ sorteado }}</h1>
+
+</ion-content>
